@@ -1,0 +1,163 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "cardTokenId",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "last4",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint8",
+				"name": "expMonth",
+				"type": "uint8"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint16",
+				"name": "expYear",
+				"type": "uint16"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "status",
+				"type": "string"
+			}
+		],
+		"name": "CardRegistered",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_cardTokenId",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_last4",
+				"type": "string"
+			},
+			{
+				"internalType": "uint8",
+				"name": "_expMonth",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint16",
+				"name": "_expYear",
+				"type": "uint16"
+			},
+			{
+				"internalType": "string",
+				"name": "_status",
+				"type": "string"
+			}
+		],
+		"name": "registerCard",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "getCardDetails",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "cardTokenId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "last4",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "expMonth",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint16",
+						"name": "expYear",
+						"type": "uint16"
+					},
+					{
+						"internalType": "string",
+						"name": "status",
+						"type": "string"
+					}
+				],
+				"internalType": "struct CardStorage.CardDetails",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "userCards",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "cardTokenId",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "last4",
+				"type": "string"
+			},
+			{
+				"internalType": "uint8",
+				"name": "expMonth",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint16",
+				"name": "expYear",
+				"type": "uint16"
+			},
+			{
+				"internalType": "string",
+				"name": "status",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
