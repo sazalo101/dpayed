@@ -12,10 +12,10 @@ contract CardStorage {
 
     mapping(address => CardDetails) public userCards;
 
-    // Event to log card registration
+    
     event CardRegistered(address indexed user, string cardTokenId, string last4, uint8 expMonth, uint16 expYear, string status);
 
-    // Function to store card details
+
     function registerCard(
         string memory _cardTokenId,
         string memory _last4,
@@ -36,7 +36,7 @@ contract CardStorage {
         emit CardRegistered(msg.sender, _cardTokenId, _last4, _expMonth, _expYear, _status);
     }
 
-    // Function to retrieve card details
+    
     function getCardDetails(address _user) public view returns (CardDetails memory) {
         return userCards[_user];
     }
